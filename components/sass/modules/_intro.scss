@@ -1,0 +1,55 @@
+header
+{
+    .fullheight
+    {
+        @include display-flex();
+        @include align-items(center);
+        @include justify-content( center );
+        @include backImage('../images/hotel/splash_hotelphoto.jpg', $opStart : 0.9, $opEnd : 0.8, $color1 : $dark);
+    }
+    .hgroup
+    {
+        padding : 100px 0;
+        h1{
+            color: $skyblue;
+            font-size : 5em;
+            font-weight: $heavy;
+            line-height: .8em;
+            @include text-shadow($dark 0 0 20px );
+            text-align: center;
+            margin-bottom: 20px;
+        }//h1
+
+        h2
+        {
+            display : block;
+            color : $light;
+            max-width: 200px;
+            background: rgba($skyblue,0.6);
+            text-align: center;
+            width: 60%;
+            margin : 0 auto;
+            font-size: 1.3em;
+            border-radius: 5px;
+            padding: 10px;
+        
+        }//h2
+
+        p{
+            @include card;
+            text-align: center;
+            display:block;
+            background: $light;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-top: 200px;
+            @include box-shadow( 0 0 10px -2px $blue  );
+            img{
+                padding-top: 10px;
+                max-width: 50px;
+            }//img
+        }//p
+    }//hgroup
+}//header

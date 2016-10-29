@@ -1,0 +1,40 @@
+#events
+{
+    @include clearfix;
+    padding:  0;
+    .event
+    {
+        position : relative ; 
+        @include container(100%);
+        @include breakpoint($small)
+        {
+            @include span(6 of 12 0);
+        }
+    }
+
+    .content
+    {
+        position: absolute;
+        bottom: 0;
+        background-color : rgba( $dark , 0.7 );
+        padding: 30px;
+        color : $light;
+        font-weight: $thin;
+        line-height: 130%;
+
+        h1,h2
+        {
+            color : $light;
+        }
+    }
+    #businessmeetings
+    {
+        @include backImage( '../images/hotel/events_conference.jpg' ,$grDir :to right, $bgPos : 65% top );
+        
+    }
+    #weddings
+    {
+        @include backImage ( '../images/hotel/events_wedding.jpg' );
+        
+    }
+}

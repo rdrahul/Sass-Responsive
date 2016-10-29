@@ -1,0 +1,114 @@
+#hotelinfo
+{
+    background-color: darken($green, 10) ;
+    color : $light;
+    .heading
+    {
+        h1
+        {
+            color : $light;
+            text-align: center;
+            font-size: 3em;
+            font-weight: $thin;
+        }
+        margin : 20px 0;
+    }
+
+    
+    #usefulinfo
+    {
+        @include breakpoint( $small )
+        {
+            @include card;
+        }
+        
+
+        @include clearfix;
+        @include container(77%);
+        
+        @include breakpoint($small $medium)
+        {
+            @include container(80%);
+        }
+        @include breakpoint(max-width $small)
+        {
+            @include container(90%);
+        }
+
+        section
+        {
+            
+            @include breakpoint($medium)
+            {
+                @include span(2 of 6);
+            }
+            @include breakpoint( max-width $small )
+            {
+                @include card;
+                margin: 20px 0;
+                padding: 10px; 
+            }
+
+            h2
+            {
+                color : $light;
+                font-weight: $normal;
+                font-size: 1.7em;
+                text-align: center;
+                padding : 10px 0px;
+                
+            }
+
+            ul{
+                padding: 0 20px;
+                li{
+                    list-style: square;
+                }
+            }//ul
+        }//section
+
+        #arrivalinfo
+            {
+                ul{
+                
+                    li{
+                        margin:10px 0;
+                        text-align: center;
+                        list-style: none;
+                        strong
+                        {   
+                            color  : $yellow;
+                        }//strong
+
+                        &:after
+                        {
+                            content:'';
+                            display:block;
+                            width : 70%;
+                            margin : 7px auto;
+                            border : 1px solid $yellow;
+                        }
+                        &:last-child:after{
+                            display: none;
+                        }
+                    } 
+                }
+            }//arrivalinfo
+    }//usefulinfo
+
+    #greenprogram
+    {
+        margin-top : 10px;
+        background-color: $green;
+        padding : 10px;
+        @include card(3);
+        text-align: center;
+        @include container(70%);
+        h2{
+            color : $light;
+            font-size : 2em;
+            
+        }
+    }
+    
+}

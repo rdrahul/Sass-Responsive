@@ -1,0 +1,27 @@
+footer
+{
+    @include container(100%);
+    background : lighten($dark,10);
+    padding : 30px 0;
+
+    #socialmedia
+    {
+        text-align : center;
+        ul
+        {
+            list-style: none;
+            li
+            {
+                display: inline-block;
+                padding : 0 10px;
+                img
+                {
+                    width : 40px;
+                    @include border-radius( 50% );
+
+                }
+            }
+        }
+    }
+    
+}
